@@ -4,33 +4,37 @@ const inquirer = require("inquirer")
 
 const questions = [
 {
-    itemName: "logoText",
+    name: "logoText",
     type: "input",
     message: "Enter up to 3 characters.",
 },
 {
-    itemName: "textColor",
+    name: "textColor",
     type: "input",
     message: "Enter a text color, or a hexadecimal number.",
 },
 {
-    itemName: "logoShape",
-    type: "input",
+    name: "logoShape",
+    type: "list",
     message: "Select in a shape.",
     choices: ["Circle", "Triangle", "Square"],
 },
 {
-    itemName: "shapeColor",
+    name: "shapeColor",
     type: "input",
     message: "Enter in a shape color, or a hexadecimal number.",
 },
 
 ];
 
+function writeTofile(filename, data) {
+fs.writeFile(fileName)
+}
+
 function init() {
-    inquirer.propmt(questions).then(function(data) {
+    inquirer.prompt(questions).then(function(data) {    
         var filename = "logo.svg";
-        writeTofile(filename,data);
+        //writeTofile(filename,data);
     })
 };
 init();
