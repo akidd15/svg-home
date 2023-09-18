@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const inquirer = require("inquirer")
+const inquirer = require("inquirer");
+const shapes = require("./lib/shapes")
 
 const questions = [
 {
@@ -27,14 +28,16 @@ const questions = [
 
 ];
 
-function writeTofile(filename, data) {
-fs.writeFile(fileName)
-}
+// fix writefile function
+function writeTofile(fileName, data) {
+    var renderLogo = renderLogo(data);
+fs.writeFile(fileName, data)
+};
 
 function init() {
-    inquirer.prompt(questions).then(function(data) {    
-        var filename = "logo.svg";
-        //writeTofile(filename,data);
+    inquirer.prompt(questions).then(function(data) { 
+        var fileName = "logo.svg";   
+        writeTofile(fileName, data)
     })
 };
 init();
