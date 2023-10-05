@@ -16,7 +16,7 @@
   ## Usage
   In the command line run node index.js to start the application.
   ## Contributing
-  undefined
+  Salvador Mejia
   ## Tests
   All tests were ran inside the terminal using jest to verify the correct generation of the shape and shape color.
   ## Questions
