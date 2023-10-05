@@ -1,0 +1,6 @@
+<svg height="200" width="300" 
+        xmlns="http://www.w3.org/2000/svg">
+            <polygon points="150,0 250,200 50,200" fill="green" />
+            <text fill="white" font-size="50" x="145" y="140" 
+            text-anchor="middle">svg</text>
+          </svg>
